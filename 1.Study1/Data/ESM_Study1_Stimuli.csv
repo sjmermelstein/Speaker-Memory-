@@ -1,0 +1,97 @@
+﻿List_Num,Item,Type,Category ,Domain ,Violation,Story,Source,Correct,Order,Version,Question
+1,The shovel felt heavy to hold and was a light brown in color.,INT,,,,V1-1,Sam,1,1,1,1_Test blockV1_INT
+2,This rainbow was high in the sky and could be seen from the ground. ,INT,,,,V1-1,Sam,1,1,1,2_Test blockV1_INT
+3,The rat ate insects off the ground and moved around quickly on all four of its feet.,INT,,,,V1-1,Sam,1,1,1,3_Test blockV1_INT
+4,"This was a lizard that had a long, thin tail and could never die no matter what happened to it. ",MCI,Animal,Biology,Breach,V1-1,Sam,1,1,1,4_Test blockV1_MCI
+5,The hammer had a wooden handle and needed food every day to stay strong. ,MCI,Artifact,Biology,Transfer,V1-1,Sam,1,1,1,5_Test blockV1_MCI
+6,The rose swayed in the wind and could be in two different parts of the world at the exact same time.,MCI,Plant,Physics ,Breach,V1-1,Sam,1,1,1,6_Test blockV1_MCI
+7,This was a rock that was thick and hard and looked shiny in the sunlight. ,INT,,,,V1-2,Ariel,2,1,1,7_Test blockV1_INT
+8,The tulip had roots that went deep into the soil and needed sunshine to grow or else it would be small. ,INT,,,,V1-2,Ariel,2,1,1,8_Test blockV1_INT
+9,The dog had soft fur and liked to play with toys.,INT,,,,V1-2,Ariel,2,1,1,9_Test blockV1_INT
+10,The banana was very fresh and ripe and turned invisible a few minutes every day.,MCI,Plant,Physics ,Breach,V1-2,Ariel,2,1,1,10_Test blockV1_MCI
+11,This was a fence that was covered with moss and was crying because it was sad.,MCI,Artifact,Psychology,Transfer,V1-2,Ariel,2,1,1,11_Test blockV1_MCI
+12,The branch felt cold to the touch and could speak in French. ,MCI,Object,Psychology ,Transfer,V1-2,Ariel,2,1,1,12_Test blockV1_MCI
+13,"That this river took time to cross over and was surrounded by cold, clear air. ",INT,,,,V1-3,Miguel,3,1,1,13_Test blockV1_INT
+14,This was a mango that had a bright yellow skin and a very fruity and delicious smell.,INT,,,,V1-3,Miguel,3,1,1,14_Test blockV1_INT
+15,The beetle stayed in the mud and moved slowly inch by inch.,INT,,,,V1-3,Miguel,3,1,1,15_Test blockV1_INT
+16,This cactus was small in size and liked to sing loudly.,MCI,Plant,Biology,Transfer,V1-3,Miguel,3,1,1,16_Test blockV1_MCI
+17,The cat had brown spots and could walk through solid walls.,MCI,Animal,Physics ,Breach,V1-3,Miguel,3,1,1,17_Test blockV1_MCI
+18,This table was big and often would float in midair. ,MCI,Artifact,Physics ,Breach,V1-3,Miguel,3,1,1,18_Test blockV1_MCI
+19,The mailbox was made of metal and had sharp edges along its corners. ,INT,,,,V1-4,Joanna ,4,1,1,19_Test blockV1_INT
+20,The shrub was dark green and was growing next a stream.,INT,,,,V1-4,Joanna ,4,1,1,20_Test blockV1_INT
+21,The chair was firm to the touch and could hold lots of weight.,INT,,,,V1-4,Joanna ,4,1,1,21_Test blockV1_INT
+22,"The cloud was large and far away, and knew what happened in the future.",MCI,Object,Psychology,Transfer,V1-4,Joanna ,4,1,1,22_Test blockV1_MCI
+23,The mountain was near a forest and could overhear everything people said by it.,MCI,Object,Psychology,Transfer,V1-4,Joanna ,4,1,1,23_Test blockV1_MCI
+24,The earthworm hid in a log and knew everybody’s inner-most thoughts.,MCI,Animal,Psychology ,Breach,V1-4,Joanna ,4,1,1,24_Test blockV1_MCI
+1,The shovel felt heavy to hold and was a light brown in color.,INT,,,,V2-1,Joanna ,4,2,1,1_Test blockV1_INT
+2,This rainbow was high in the sky and could be seen from the ground. ,INT,,,,V2-1,Joanna ,4,2,1,2_Test blockV1_INT
+3,The rat ate insects off the ground and moved around quickly on all four of its feet.,INT,,,,V2-1,Joanna ,4,2,1,3_Test blockV1_INT
+4,"This was a lizard that had a long, thin tail and could never die no matter what happened to it. ",MCI,Animal,Biology,Breach,V2-1,Joanna ,4,2,1,4_Test blockV1_MCI
+5,The hammer had a wooden handle and needed food every day to stay strong. ,MCI,Artifact,Biology,Transfer,V2-1,Joanna ,4,2,1,5_Test blockV1_MCI
+6,The rose swayed in the wind and could be in two different parts of the world at the exact same time.,MCI,Plant,Physics ,Breach,V2-1,Joanna ,4,2,1,6_Test blockV1_MCI
+7,This was a rock that was thick and hard and looked shiny in the sunlight. ,INT,,,,V2-2,Sam,1,2,1,7_Test blockV1_INT
+8,The tulip had roots that went deep into the soil and needed sunshine to grow or else it would be small. ,INT,,,,V2-2,Sam,1,2,1,8_Test blockV1_INT
+9,The dog had soft fur and liked to play with toys.,INT,,,,V2-2,Sam,1,2,1,9_Test blockV1_INT
+10,The banana was very fresh and ripe and turned invisible a few minutes every day.,MCI,Plant,Physics ,Breach,V2-2,Sam,1,2,1,10_Test blockV1_MCI
+11,This was a fence that was covered with moss and was crying because it was sad.,MCI,Artifact,Psychology,Transfer,V2-2,Sam,1,2,1,11_Test blockV1_MCI
+12,The branch felt cold to the touch and could speak in French. ,MCI,Object,Psychology ,Transfer,V2-2,Sam,1,2,1,12_Test blockV1_MCI
+13,"That this river took time to cross over and was surrounded by cold, clear air. ",INT,,,,V2-3,Ariel,2,2,1,13_Test blockV1_INT
+14,This was a mango that had a bright yellow skin and a very fruity and delicious smell.,INT,,,,V2-3,Ariel,2,2,1,14_Test blockV1_INT
+15,The beetle stayed in the mud and moved slowly inch by inch.,INT,,,,V2-3,Ariel,2,2,1,15_Test blockV1_INT
+16,This cactus was small in size and liked to sing loudly.,MCI,Plant,Biology,Transfer,V2-3,Ariel,2,2,1,16_Test blockV1_MCI
+17,The cat had brown spots and could walk through solid walls.,MCI,Animal,Physics ,Breach,V2-3,Ariel,2,2,1,17_Test blockV1_MCI
+18,This table was big and often would float in midair. ,MCI,Artifact,Physics ,Breach,V2-3,Ariel,2,2,1,18_Test blockV1_MCI
+19,The mailbox was made of metal and had sharp edges along its corners. ,INT,,,,V2-4,Miguel,3,2,1,19_Test blockV1_INT
+20,The shrub was dark green and was growing next a stream.,INT,,,,V2-4,Miguel,3,2,1,20_Test blockV1_INT
+21,The chair was firm to the touch and could hold lots of weight.,INT,,,,V2-4,Miguel,3,2,1,21_Test blockV1_INT
+22,"The cloud was large and far away, and knew what happened in the future.",MCI,Object,Psychology,Transfer,V2-4,Miguel,3,2,1,22_Test blockV1_MCI
+23,The mountain was near a forest and could overhear everything people said by it.,MCI,Object,Psychology,Transfer,V2-4,Miguel,3,2,1,23_Test blockV1_MCI
+24,The earthworm hid in a log and knew everybody’s inner-most thoughts.,MCI,Animal,Psychology ,Breach,V2-4,Miguel,3,2,1,24_Test blockV1_MCI
+1,The hammer felt heavy to hold and was a light brown in color.,INT,,,,V3-1,Miguel,3,3,2,1_Test blockV1_INT
+2,This cloud was high in the sky and could be seen from the ground. ,INT,,,,V3-1,Miguel,3,3,2,2_Test blockV1_INT
+3,The lizard ate insects off the ground and moved around quickly on all four of its feet.,INT,,,,V3-1,Miguel,3,3,2,3_Test blockV1_INT
+4,"This was a rat that had a long, thin tail and could never die no matter what happened to it. ",MCI,Animal,Biology,Breach,V3-1,Miguel,3,3,2,4_Test blockV1_MCI
+5,The shovel had a wooden handle and needed food every day to stay strong. ,MCI,Artifact,Biology,Transfer,V3-1,Miguel,3,3,2,5_Test blockV1_MCI
+6,The tulip swayed in the wind and could be in two different parts of the world at the exact same time. ,MCI,Plant,Physics ,Breach,V3-1,Miguel,3,3,2,6_Test blockV1_MCI
+7,This was a branch that was thick and hard and looked shiny in the sunlight. ,INT,,,,V3-2,Joanna,4,3,2,7_Test blockV1_INT
+8,The rose had roots that went deep into the soil and needed sunshine to grow or else it would be small. ,INT,,,,V3-2,Joanna,4,3,2,8_Test blockV1_INT
+9,The cat had soft fur and liked to play with toys.,INT,,,,V3-2,Joanna,4,3,2,9_Test blockV1_INT
+10,The mango was very fresh and ripe and turned invisible a few minutes every day.,MCI,Plant,Physics ,Breach,V3-2,Joanna,4,3,2,10_Test blockV1_MCI
+11,This was a mailbox that was covered with moss and was crying because it was sad. ,MCI,Artifact,Psychology,Transfer,V3-2,Joanna,4,3,2,11_Test blockV1_MCI
+12,The rock felt cold to the touch and could speak in French. ,MCI,Object,Psychology ,Transfer,V3-2,Joanna,4,3,2,12_Test blockV1_MCI
+13,"That this mountain took time to cross over and was surrounded by cold, clear air. ",INT,,,,V3-3,Sam,1,3,2,13_Test blockV1_INT
+14,The earthworm stayed in the mud and moved slowly inch by inch.,INT,,,,V3-3,Sam,1,3,2,14_Test blockV1_INT
+15,This was a banana that had a bright yellow skin and a very fruity and delicious smell.,INT,,,,V3-3,Sam,1,3,2,15_Test blockV1_INT
+16,This shrub was small in size and liked to sing loudly.,MCI,Plant,Biology,Transfer,V3-3,Sam,1,3,2,16_Test blockV1_MCI
+17,This chair was big and often would float in midair. ,MCI,Animal,Physics ,Breach,V3-3,Sam,1,3,2,17_Test blockV1_MCI
+18,The dog had brown spots and could walk through solid walls.,MCI,Artifact,Physics ,Breach,V3-3,Sam,1,3,2,18_Test blockV1_MCI
+19,The fence was made of metal and had sharp edges along its corners. ,INT,,,,V3-4,Ariel,2,3,2,19_Test blockV1_INT
+20,The cactus was dark green and was growing next a stream.,INT,,,,V3-4,Ariel,2,3,2,20_Test blockV1_INT
+21,The table was firm to the touch and could hold lots of weight.,INT,,,,V3-4,Ariel,2,3,2,21_Test blockV1_INT
+22,"The rainbow was large and far away, and knew what happened in the future.",MCI,Object,Psychology,Transfer,V3-4,Ariel,2,3,2,22_Test blockV1_MCI
+23,The river was near a forest and could overhear everything people said by it.,MCI,Object,Psychology,Transfer,V3-4,Ariel,2,3,2,23_Test blockV1_MCI
+24,The beetle hid in a log and knew everybody’s inner-most thoughts. ,MCI,Animal,Psychology ,Breach,V3-4,Ariel,2,3,2,24_Test blockV1_MCI
+1,The hammer felt heavy to hold and was a light brown in color.,INT,,,,V4-1,Ariel,2,4,2,1_Test blockV1_INT
+2,This cloud was high in the sky and could be seen from the ground. ,INT,,,,V4-1,Ariel,2,4,2,2_Test blockV1_INT
+3,The lizard ate insects off the ground and moved around quickly on all four of its feet.,INT,,,,V4-1,Ariel,2,4,2,3_Test blockV1_INT
+4,"This was a rat that had a long, thin tail and could never die no matter what happened to it. ",MCI,Animal,Biology,Breach,V4-1,Ariel,2,4,2,4_Test blockV1_MCI
+5,The shovel had a wooden handle and needed food every day to stay strong. ,MCI,Artifact,Biology,Transfer,V4-1,Ariel,2,4,2,5_Test blockV1_MCI
+6,The tulip swayed in the wind and could be in two different parts of the world at the exact same time. ,MCI,Plant,Physics ,Breach,V4-1,Ariel,2,4,2,6_Test blockV1_MCI
+7,This was a branch that was thick and hard and looked shiny in the sunlight. ,INT,,,,V4-2,Miguel,3,4,2,7_Test blockV1_INT
+8,The rose had roots that went deep into the soil and needed sunshine to grow or else it would be small. ,INT,,,,V4-2,Miguel,3,4,2,8_Test blockV1_INT
+9,The cat had soft fur and liked to play with toys.,INT,,,,V4-2,Miguel,3,4,2,9_Test blockV1_INT
+10,The mango was very fresh and ripe and turned invisible a few minutes every day.,MCI,Plant,Physics ,Breach,V4-2,Miguel,3,4,2,10_Test blockV1_MCI
+11,This was a mailbox that was covered with moss and was crying because it was sad. ,MCI,Artifact,Psychology,Transfer,V4-2,Miguel,3,4,2,11_Test blockV1_MCI
+12,The rock felt cold to the touch and could speak in French. ,MCI,Object,Psychology ,Transfer,V4-2,Miguel,3,4,2,12_Test blockV1_MCI
+13,"That this mountain took time to cross over and was surrounded by cold, clear air. ",INT,,,,V4-3,Joanna,4,4,2,13_Test blockV1_INT
+14,The earthworm stayed in the mud and moved slowly inch by inch.,INT,,,,V4-3,Joanna,4,4,2,14_Test blockV1_INT
+15,This was a banana that had a bright yellow skin and a very fruity and delicious smell.,INT,,,,V4-3,Joanna,4,4,2,15_Test blockV1_INT
+16,This shrub was small in size and liked to sing loudly.,MCI,Plant,Biology,Transfer,V4-3,Joanna,4,4,2,16_Test blockV1_MCI
+17,This chair was big and often would float in midair. ,MCI,Animal,Physics ,Breach,V4-3,Joanna,4,4,2,17_Test blockV1_MCI
+18,The dog had brown spots and could walk through solid walls.,MCI,Artifact,Physics ,Breach,V4-3,Joanna,4,4,2,18_Test blockV1_MCI
+19,The fence was made of metal and had sharp edges along its corners. ,INT,,,,V4-4,Sam,1,4,2,19_Test blockV1_INT
+20,The cactus was dark green and was growing next a stream.,INT,,,,V4-4,Sam,1,4,2,20_Test blockV1_INT
+21,The table was firm to the touch and could hold lots of weight.,INT,,,,V4-4,Sam,1,4,2,21_Test blockV1_INT
+22,"The rainbow was large and far away, and knew what happened in the future.",MCI,Object,Psychology,Transfer,V4-4,Sam,1,4,2,22_Test blockV1_MCI
+23,The river was near a forest and could overhear everything people said by it.,MCI,Object,Psychology,Transfer,V4-4,Sam,1,4,2,23_Test blockV1_MCI
+24,The beetle hid in a log and knew everybody’s inner-most thoughts. ,MCI,Animal,Psychology ,Breach,V4-4,Sam,1,4,2,24_Test blockV1_MCI

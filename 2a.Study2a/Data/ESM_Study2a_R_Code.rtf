@@ -1,0 +1,231 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #After download from Qualtrics, manually  \
+#eliminate extra headers\
+#eliminate non-complete datasets (typically test runs by assistants) \
+#eliminate time, date, and other meta-data \
+#eliminate other extraneous variables like timings, distractor items\
+#add condition (if applicable), order, and version variables \
+#add AC (total attention check accuracy) \
+#Re-organize such that each condition / order is under the same columns (no blank spaces) \
+\
+#Data wrangling code for ESM_Study2a \
+#Requires files ESM_Study2a_Raw.csv and ESM_Study2a_Stimuli.csv\
+\
+#Set up wd, libraries, and load in .csv\
+\
+setwd("~/Desktop")\
+\
+install.packages("tidyverse")\
+library(tidyverse)\
+\
+ESM_Study2a <- read_csv("ESM_Study2a_Raw.csv")\
+\
+\
+# Select response columns, convert to "long format"\
+\
+ESM_Study2a_Long <- ESM_Study2a %>% \
+  select(ResponseId, Order, `1_Test blockV1_INT`:`24_Test blockV1_MCI`) %>% \
+  gather(`1_Test blockV1_INT`:`24_Test blockV1_MCI`, key = "Question", value = "Response")\
+\
+\
+#Enter in test_key (the correct answers for each order) and join it to long_format\
+\
+test_key <- read_csv("ESM_Study2a_Stimuli.csv") %>% select(Question, Order, Correct, Domain, Violation)\
+\
+ESM_Study2a_Long <- left_join(ESM_Study2a_Long, test_key)\
+\
+#Evaluate participant responses against test_key, 1 = correct ; 0 = incorrect\
+\
+ESM_Study2a_Long$Correct_Response <- as.numeric(ESM_Study2a_Long$Response == ESM_Study2a_Long$Correct)\
+\
+ESM_Study2a_Long <- ESM_Study2a_Long %>% separate(Question, into = c("J1","J2","J3","Condition"), remove = F) %>% \
+  select(-c(J1:J3))\
+\
+#Generate Summary Data \
+\
+summary_by_P <- ESM_Study2a_Long %>% group_by(ResponseId, Condition) %>% summarise(Mean = mean(Correct_Response))\
+\
+ESM_Study2a_summary <- summary_by_P %>% spread(key = Condition, value = Mean) \
+\
+#Re-combine with demographics\
+\
+ESM_Study2a_Primary <- left_join(ESM_Study2a_summary, ESM_Study2a)\
+\
+\
+\
+\
+######Sup. Analyses: Breach vs. Transfer\
+\
+\
+# Select response columns, convert to "long format"\
+\
+ESM_Study2a_Domain <- ESM_Study2a %>% \
+  select(ResponseId, Order,\
+         '4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI') %>% \
+  gather('4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI', key = "Question", value = "Response")\
+\
+\
+#Enter in test_key (the correct answers for each order) and join it to long_format\
+\
+test_key <- read_csv("ESM_Study2a_Stimuli.csv") %>% select(Question, Order, Correct, Domain, Violation)\
+\
+ESM_Study2a_Domain <- left_join(ESM_Study2a_Domain, test_key)\
+\
+#Evaluate participant responses against test_key, 1 = correct ; 0 = incorrect\
+\
+ESM_Study2a_Domain$Correct_Response <- as.numeric(ESM_Study2a_Domain$Response == ESM_Study2a_Domain$Correct)\
+\
+ESM_Study2a_Domain <- ESM_Study2a_Domain %>% separate(Question, into = c("J1","J2","J3","Condition"), remove = F) %>% \
+  select(-c(J1:J3))\
+\
+#Generate Summary Data \
+\
+summary_by_BvT <- ESM_Study2a_Domain %>% group_by(ResponseId, Violation) %>% summarise(Mean = mean(Correct_Response))\
+\
+ESM_Study2a_BvT <- summary_by_BvT %>% spread(key = Violation, value = Mean) \
+\
+#Re-combine with demographics\
+\
+ESM_Study2a_BvT <- left_join(ESM_Study2a_Primary,ESM_Study2a_BvT)\
+\
+\
+\
+####Supp analyses: Domains \
+ESM_Study2a_Domain <- ESM_Study2a %>% \
+  select(ResponseId, Order,\
+         '4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI') %>% \
+  gather('4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI', key = "Question", value = "Response")\
+\
+\
+#Enter in test_key (the correct answers for each order) and join it to long_format\
+\
+test_key <- read_csv("ESM_Study2a_Stimuli.csv") %>% select(Question, Order, Correct, Domain, Violation)\
+\
+ESM_Study2a_Domain <- left_join(ESM_Study2a_Domain, test_key)\
+\
+#Evaluate participant responses against test_key, 1 = correct ; 0 = incorrect\
+\
+ESM_Study2a_Domain$Correct_Response <- as.numeric(ESM_Study2a_Domain$Response == ESM_Study2a_Domain$Correct)\
+\
+ESM_Study2a_Domain <- ESM_Study2a_Domain %>% separate(Question, into = c("J1","J2","J3","Condition"), remove = F) %>% \
+  select(-c(J1:J3))\
+\
+#Generate Summary Data \
+\
+summary_by_D <- ESM_Study2a_Domain %>% group_by(ResponseId, Domain) %>% summarise(Mean = mean(Correct_Response))\
+\
+ESM_Study2a_Domain <- summary_by_D %>% spread(key = Domain, value = Mean) \
+\
+#Re-combine with demographics\
+\
+ESM_Study2a_byDomain <- left_join(ESM_Study2a_Domain, ESM_Study2a_BvT)\
+\
+\
+###Supp Analysis for Categories \
+\
+ESM_Study2a_Category <- ESM_Study2a %>% \
+  select(ResponseId, Order,\
+         '4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI') %>% \
+  gather('4_Test blockV1_MCI',\
+         '5_Test blockV1_MCI',\
+         '6_Test blockV1_MCI', \
+         '10_Test blockV1_MCI',\
+         '11_Test blockV1_MCI',\
+         '12_Test blockV1_MCI',\
+         '16_Test blockV1_MCI',\
+         '17_Test blockV1_MCI',\
+         '18_Test blockV1_MCI',\
+         '22_Test blockV1_MCI',\
+         '23_Test blockV1_MCI',\
+         '24_Test blockV1_MCI', key = "Question", value = "Response")\
+\
+\
+#Enter in test_key (the correct answers for each order) and join it to long_format\
+\
+test_key <- read_csv("ESM_Study2a_Stimuli.csv") %>% select(Question, Order, Category, Correct, Domain, Violation)\
+\
+ESM_Study2a_Category <- left_join(ESM_Study2a_Category, test_key)\
+\
+#Evaluate participant responses against test_key, 1 = correct ; 0 = incorrect\
+\
+ESM_Study2a_Category$Correct_Response <- as.numeric(ESM_Study2a_Category$Response == ESM_Study2a_Category$Correct)\
+\
+ESM_Study2a_Category <- ESM_Study2a_Category %>% separate(Question, into = c("J1","J2","J3","Condition"), remove = F) %>% \
+  select(-c(J1:J3))\
+\
+#Generate Summary Data \
+\
+summary_by_C <- ESM_Study2a_Category %>% group_by(ResponseId, Category) %>% summarise(Mean = mean(Correct_Response))\
+\
+ESM_Study2a_Category <- summary_by_C %>% spread(key = Category, value = Mean) \
+\
+#Re-combine with demographics\
+\
+ESM_Study2a_Dataset <- left_join(ESM_Study2a_Category, ESM_Study2a_byDomain)\
+\
+\
+#Write final CSV for analysis in JASP \
+\
+write.csv(ESM_Study2a_Dataset, "ESM_Study2a_Dataset.csv")\
+}
